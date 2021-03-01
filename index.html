@@ -15,6 +15,7 @@
     ul.task-list{list-style: none;}
   </style>
   <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
@@ -24,6 +25,187 @@
 <h1 class="title">Catastrophe Theory</h1>
 <p class="author">Job Feldbrugge</p>
 </header>
-<p>Catastrophe theory is the classification of degenerate critical points.</p>
+<p>Catastrophe theory is the classification of isolated degenerate critical points. The theory is important for a wide range of fields in mathematics and science. However, it can be difficult to get started. While the theorems can be stated in elementary terms, and there are many expositions of the applications, the proofs require a solid foundation in mathematics. In these notes, I will state the main theorems and give a flavour of the underlying mathematics. For a complete, accessible, and rigorous treatment of catastrophe theory I recommend <a href="https://www.routledge.com/Catastrophe-Theory-Second-Edition/Castrigiano-Hayes/p/book/9780813341255">Catastrophe Theory</a> by Domenico Castrigiano and Sandra Hayes to which I will refer in these notes.</p>
+<p>A smooth function <span class="math inline">\(f: U \to \mathbb{R}\)</span> with <span class="math inline">\(U\)</span> an open subset of <span class="math inline">\(\mathbb{R}^n\)</span> including the origin <span class="math inline">\(\boldsymbol{0}\)</span> has a critical point at the origin when its gradient vanishes at this point, <em>i.e.,</em></p>
+<p><span class="math display">\[D f(\boldsymbol{0}) = 
+(\partial_1 f(\boldsymbol{0}), \dots, \partial_n f(\boldsymbol{0})) 
+=\boldsymbol{0},\]</span></p>
+<p>with the partial derivative <span class="math inline">\(\partial_i f = \frac{\partial f}{\partial x_i}.\)</span> The character of the critical point is often determined by the second-order derivative in the form of the Hessian matrix</p>
+<p><span class="math display">\[D^2 f(\boldsymbol{0}) = 
+\begin{pmatrix}
+\partial_{1}^2 f(\boldsymbol{0})   &amp; \partial_1 \partial_2 f(\boldsymbol{0}) &amp; \dots &amp; \partial_1 \partial_n f(\boldsymbol{0})\\
+\partial_2 \partial_1 f(\boldsymbol{0}) &amp; \partial_{2}^2 f(\boldsymbol{0})   &amp; \dots &amp; \partial_2 \partial_n f(\boldsymbol{0})\\
+\vdots      &amp; \vdots      &amp; \ddots &amp; \vdots\\
+\partial_n \partial_1 f(\boldsymbol{0}) &amp; \partial_n \partial_2 f(\boldsymbol{0}) &amp; \dots &amp; \partial_{n}^2 f(\boldsymbol{0})
+\end{pmatrix}.
+\]</span></p>
+<p>The <strong>rank</strong> – defined by the number of independent rows or columns – and the <strong>index</strong> – defined as the number of negative eigenvalues – of the Hessian matrix are independent of the choice of coordinates. That is to say, given <span class="math inline">\(g(\boldsymbol{x}) = f(\psi(\boldsymbol{x}))\)</span> – with a diffeomorphism <span class="math inline">\(\psi:U \to V\)</span> with <span class="math inline">\(U\)</span> and <span class="math inline">\(V\)</span> open sets in <span class="math inline">\(\mathbb{R}^n\)</span>– the transformations of the gradient and Hessian matrix, following from the chain rule, preserve gradient and the rank and index of the Hessian matrix a the critical point,</p>
+<p><span class="math display">\[
+\begin{align}
+D g(\boldsymbol{0}) &amp;= D f(\boldsymbol{0}) D \psi(\boldsymbol{0}) = \boldsymbol{0},\\
+D^2g(\boldsymbol{0}) &amp;=(D \psi(\boldsymbol{0}))^T D^2f(\boldsymbol{0}) (D \psi(\boldsymbol{0})),
+\end{align}
+\]</span></p>
+<p>where the first order derivative of the diffeomorphism <span class="math inline">\(\psi(\boldsymbol{x}) = (\psi_1(\boldsymbol{x}), \dots, \psi_n(\boldsymbol{x}))\)</span> is defined as</p>
+<p><span class="math display">\[D \psi(\boldsymbol{0}) = 
+\begin{pmatrix}
+\partial_{1} \psi_1(\boldsymbol{0})   &amp; \partial_1 \psi_2(\boldsymbol{0}) &amp; \dots &amp; \partial_1 \psi_n(\boldsymbol{0})\\
+\partial_2 \psi_1(\boldsymbol{0}) &amp; \partial_{2} \psi_2(\boldsymbol{0})   &amp; \dots &amp; \partial_2 \psi_n(\boldsymbol{0})\\
+\vdots      &amp; \vdots      &amp; \ddots &amp; \vdots\\
+\partial_n \psi_1(\boldsymbol{0}) &amp; \partial_n \psi_2(\boldsymbol{0}) &amp; \dots &amp; \partial_{n} \psi_n(\boldsymbol{0})
+\end{pmatrix}.
+\]</span></p>
+<p>The rank determines whether the critical points is <strong>degenerate</strong> or <strong>nondegenerate</strong>.</p>
+<p><strong>Definition:</strong> <em>A critical point is <strong>nondegenerate</strong> when the Hessian matrix <span class="math inline">\(D^2 f\)</span> is invertable (the rank <span class="math inline">\(r = n\)</span>). When the Hessian matrix is not invertable, the critical point is <strong>degenerate</strong> (the rank <span class="math inline">\(r &lt; n\)</span>).</em></p>
+<p>For nondegenerate critical points, the index distinguishes between maxima, minima and saddle points.</p>
+<p><strong>Definition:</strong> <em>A nondegenerate critical point is a minimum when the index <span class="math inline">\(s=0\)</span>, a maximum when the index <span class="math inline">\(s=n\)</span>, and saddle point otherwise.</em></p>
+<p>As we will show below, the index of a nondegenerate critical point fully classifies the critical point up to coordinate transformations. For degenerate critical points, both the rank and the index play an important role in the classification.</p>
+<h2 id="nondegenerate-critical-points">Nondegenerate critical points</h2>
+<p>The classification of nondegenerate critical points is expressed by <strong>Morse Lemma</strong>, first described by Marston Morse in 1934. Note that the theorem was already anticipated by Arthur Cayley (1859) and James Clerk Maxwell (1870) in the study of contour lines in topography.</p>
+<p><strong>Morse Lemma:</strong> <em>Let <span class="math inline">\(f\)</span> vanish at <span class="math inline">\(\boldsymbol{0}\in U\)</span>. The origin is a nondegenerate critical point of <span class="math inline">\(f\)</span> with index <span class="math inline">\(s\)</span> if and only if a local diffeomorphism <span class="math inline">\(\psi\)</span> at <span class="math inline">\(\boldsymbol{0}\)</span> exists preserving the origin <span class="math inline">\(\psi(\boldsymbol{0})=\boldsymbol{0}\)</span> such that</em></p>
+<p><span class="math display">\[f(\psi(y)) = - y_1^2 - \dots - y_s^2 + y_{s+1}^2 + \dots + y_n^2\]</span></p>
+<p><em>holds around the origin.</em></p>
+<p><strong>Proof:</strong> <em>The Morse Lemma is proven in many textbooks on function theory. I will here simply refer to chapter one of <a href="https://www.routledge.com/Catastrophe-Theory-Second-Edition/Castrigiano-Hayes/p/book/9780813341255">Catastrophe Theory</a> by Domenico Castrigiano and Sandra Hayes.</em></p>
+<p>In the one-dimensional case, the lemma states that any nondegenerate critical points at the origin is either locally equivalent to a maximum <span class="math inline">\(f =f(0) -x^2\)</span> or a minimum <span class="math inline">\(f= f(0) + x^2\)</span> (see figure 1).</p>
+<figure>
+<table align="left" width="100%" id="FIG">
+<tr>
+<td>
+<img src='figures/Maximum.png' width=90% />
+</td>
+<td>
+<img src='figures/Minimum.png' width=90% />
+</td>
+</tr>
+</table>
+<figcaption>
+Fig. 1 - An illustration the nondegenerate critical points of a one-dimensional function
+</figcaption>
+</figure>
+<p>More generally, the lemma states that for nondegenerate critical points, there exist coordinates for which the function locally coincides with its second Taylor polynomial at the origin. The index of the Hessian matrix completely classifies the nondegenerate critical points of a smooth real-valued function on <span class="math inline">\(\mathbb{R}^n\)</span>.</p>
+<p>A function with only nondegenerate critical points is known as a <strong>Morse function.</strong> Morse functions are dense in the space of smooth functions, i.e., a generic function only includes nondegenerate critical points and a degenerate critical point decomposes into nondegenerate ones upon an infinitesimal perturbation of the function. As such, Morse functions play a fundamental role in both mathematics and many applications. Given these observations, one might doubt the relevance of the classification of degenerate points. However, as it turns out, degenerate critical points do frequently occur in applications when considering a family of continuously varying functions. Catastrophe theory extends Morse lemma to degenerate critical points, it describes the possible equivalence classes, determines how many terms in the Taylor series are required to distinguish the critical points, and shows how the critical points <strong>unfold</strong> into nondegenerate critical points under a general perturbation.</p>
+<h2 id="catastrophe-theory">Catastrophe theory</h2>
+<p>Given a continuous family of smooth function <span class="math inline">\(f_\boldsymbol{u}:U \to \mathbb{R}\)</span> with <span class="math inline">\(U\)</span> a open subset of <span class="math inline">\(\mathbb{R}^n\)</span> and with the external parameter <span class="math inline">\(\boldsymbol{u} = (u_1,u_2,\dots, u_d)\)</span>, René Thom’s main theorem of catastrophe theory states that when the number of external parameters does not exceed four (<span class="math inline">\(d \leq 4\)</span>), a degenerate critical point is equivalent to one of the <span class="math inline">\(\boldsymbol{7}\)</span> elementary catastrophes</p>
+<p><span class="math display">\[x^3, x^4, x^5, x^6, x^3 + y^3, x^3 - x y^2, x^2 y + y^4,\]</span></p>
+<p>up to coordinate transformations. These elementary catastrophes are known as the <strong>fold, cusp, swallowtail, butterfly, elliptic umbilic, hyperbolic umbilic,</strong> and <strong>parabolic umbilic</strong> catastrophes. The second major theorem of catastrophe theory describes how these degenerate critical points decompose into nondegenerate ones upon small perturbations. The <strong>unfolding</strong> of a critical point is <strong>versal</strong> when it includes all the possible ways in which the degenerate critical can decompose. The unfolding is <strong>universal</strong> when it is versal and only uses a minimal number of parameters.</p>
+<p>Before describing the proofs of these theorems, we colloquially apply the theory to several physical toy models to introduce the relevant concepts.</p>
+<h3 id="physical-systems-with-catastrophes">Physical systems with catastrophes</h3>
+<p>Catastrophe theory is manifest in many mechanical systems which reside in equilibrium, locally minimizing the potential energy. We will here describe a few applications for which the potential energy includes degenerate critical points. However, catastrophe theory can also be found in other systems, including problems in more generaly mechanical systems and optics. This is not surprizing given the fact that classical physical systems, in the Lagranian description, extremize the action.</p>
+<h4 id="cylinder-on-a-inclined-slope">Cylinder on a inclined slope</h4>
+<p>Consider an inhomogeneous cylinder on an inclined slope for which the centre of mass is located off centre. For convenience, let’s consider a unit cylinder with unit mass, for which the centre of mass is displaced a radius <span class="math inline">\(0 &lt; r &lt;1\)</span> from the centre, on an inclined hill with slope <span class="math inline">\(\alpha\)</span>. In this problem, the angle <span class="math inline">\(\Theta\)</span> between the horizontal line and the line connecting the centre of mass <span class="math inline">\(C\)</span> of the centre of the cylinder is the dynamical variable, which uniquelly determines the position of the cylinder. The angle of the slope <span class="math inline">\(\alpha\)</span> is the external parameter.</p>
+<p>Depending on the slope <span class="math inline">\(\alpha\)</span>, we can distingwish four configurations. For a shallow slope, the system has two equilibrium configurations for which the center of mass <span class="math inline">\(C\)</span> is above the point of contact <span class="math inline">\(P\)</span> (two left panels of figure 2). The configuration for which the centre of mass is below (above) the center of the cylinder corresponds to a global minimum (maximum) of the potential energy. When the slope is increased above a critical value, equilibrium configurations disapear (the right panel of figure 2). The cylinder will roll down the hill. At the critical slope <span class="math inline">\(\alpha_c\)</span>, the two stable equilibrium configurations merge (see the central right panel of figure 2). This configuration, known as a fold catastrophe, is a special configuration, as an infinitesimal increase in the angle <span class="math inline">\(\alpha\)</span> leads to a catastrophic change in the dynamics of the system. This is the <em>final straw that broke the camel’s back</em>.</p>
+<figure>
+<table align="left" width="100%" id="FIG">
+<tr>
+<td>
+<img src='figures/Cylinder_1.png' width=90% />
+</td>
+<td>
+<img src='figures/Cylinder_2.png' width=90% />
+</td>
+<td>
+<img src='figures/Cylinder_3.png' width=90% />
+</td>
+<td>
+<img src='figures/Cylinder_4.png' width=90% />
+</td>
+</tr>
+</table>
+<figcaption>
+Fig. 2 - Cylinder on an inclined slope, with two stable configurations (two right), a critical configuration (central right) and an unstable configuration (right).
+</figcaption>
+</figure>
+<p>To quantify the system, note that the potential energy of the system <span class="math inline">\(V\)</span> is the gravitaitonal potential of the centre of mass <span class="math inline">\(C\)</span>. When the cylinder is rolled uphill by an angle <span class="math inline">\(\Theta_0\)</span>, we observe that the centre of the cylinder is raised by a distance <span class="math inline">\(\Theta_0 \sin \alpha\)</span> while the centre of mass moves down with respect to the centre by a distance <span class="math inline">\(r\sin \Theta_0\)</span>. The potential energy of the system is thus</p>
+<p><span class="math display">\[V(\Theta, \alpha) = \Theta \sin \alpha - r \sin \Theta + c(\alpha)\]</span></p>
+<p>with some function <span class="math inline">\(c(\alpha)\)</span> independent of the dynamical variable <span class="math inline">\(\Theta\)</span>. According to the equation of motion</p>
+<p><span class="math display">\[\frac{\mathrm{d}^2\Theta}{\mathrm{d}t^2} = -\frac{\partial V}{\partial\Theta} = -\sin \alpha +r \cos \Theta\]</span></p>
+<p>the cylinder is in an equillibrium configuration when</p>
+<p><span class="math display">\[\cos \Theta = \frac{\sin \alpha}{r}.\]</span></p>
+<p>For <span class="math inline">\(\alpha &lt; \alpha_c\)</span>, with the critical angle <span class="math inline">\(\alpha_c=\arcsin r\)</span>, this equation has two real solutions corresponding to global maximum and minimum of <span class="math inline">\(V\)</span>. For <span class="math inline">\(\alpha &gt; \alpha_0\)</span>, there is no stable configuration. Expanding the potential energy around the angle <span class="math inline">\(\alpha = \alpha_c\)</span>,</p>
+<p><span class="math display">\[V(\Theta, \alpha) = \frac{r}{6 }\Theta^3 + (\alpha - \alpha_c)\Theta \cos \alpha_c + c(\alpha) + \mathcal{O}(\alpha-\alpha_c),\]</span></p>
+<p>we discover the degenerate critical point corresponding the fold catastrophe. As it turns out, this is the universal unfolding of the fold catastrophe. The normal form of the universal unfolding of the fold catastrophe is</p>
+<p><span class="math display">\[x^3+ ux,\]</span></p>
+<p>plotted in figure 3.</p>
+<figure>
+<table align="left" width="100%" id="FIG">
+<tr>
+<td>
+<img src='figures/FoldUnfolding_1.png' width=90% />
+</td>
+<td>
+<img src='figures/FoldUnfolding_2.png' width=90% />
+</td>
+<td>
+<img src='figures/FoldUnfolding_3.png' width=90% />
+</td>
+</tr>
+</table>
+<figcaption>
+Fig. 3 - The universal unfolding of fold catastrophe with the critical points in red. For negative <span class="math inline">\(u\)</span> (left), vanishing <span class="math inline">\(u\)</span> (centre), positive <span class="math inline">\(u\)</span> (right).
+</figcaption>
+</figure>
+<h4 id="zeemans-catastrophe-machine">Zeeman’s catastrophe machine</h4>
+<p>The Zeeman catastrophe machine is a good example of a mechanical system illustrating the cusp catastrophe (first introduced by Zeeman 19..). Consider a disk with the centre <span class="math inline">\(C\)</span> (see figure 4). We allow the disk to freely rotate around its centre. Consider an elastric string connecting a fixed point <span class="math inline">\(A\)</span> to a point <span class="math inline">\(S\)</span> on the perimeter of the disk to a point <span class="math inline">\(P\)</span>. The angle <span class="math inline">\(\Theta\)</span> between the point <span class="math inline">\(A\)</span>, the centre of the disk <span class="math inline">\(C\)</span> and the point <span class="math inline">\(S\)</span> is the dynamical variable of the system. We are allowed to change the point <span class="math inline">\(P\)</span>. This is the external parameter of the system. The disk will rotate to minimize the potential energy in the string.</p>
+<figure>
+<img src='figures/Zeeman.png' width=50% />
+<figcaption>
+Fig. 4 - The Zeeman catastrophe machine
+</figcaption>
+</figure>
+<p>Let’s gradually vary the position of the point <span class="math inline">\(P\)</span>. When the point <span class="math inline">\(P\)</span> is far to the right, the point <span class="math inline">\(S\)</span> will be left of the centre <span class="math inline">\(C\)</span>. When we move the point <span class="math inline">\(P\)</span> to the left to the line <span class="math inline">\(AC\)</span>, the angle <span class="math inline">\(\Theta\)</span> will gradually change, while minimize the potential energy. As we move left of the line <span class="math inline">\(AC\)</span>, we will pass a point at which the angle <span class="math inline">\(\Theta\)</span> will suddenly jump at a fold catastrophe. This behavior is illustrated by the black line at the botum of figure 4. There are two lines corresponding to the fold catastrophe depending on whether we came from the far right or the far left. The point where these two fold lines meet is the cusp catastrophe.</p>
+<p>This behavior is nicely illustrated in figure 5. The fold lines separate the region in which there is a single global minimum and the region in which there is a global and a local minimum of the potential energy. The angle of the disk <span class="math inline">\(\Theta\)</span> is not only determined by the position of <span class="math inline">\(P\)</span> but also whether <span class="math inline">\(P\)</span> was approached from the left or the right regions.</p>
+<figure>
+<img src='figures/Cusp.png' width=50% />
+<figcaption>
+Fig. 5 - The cusp catastrophe
+</figcaption>
+</figure>
+<p>This behavior is well captured by the universal unfolding of the cusp catastrophe</p>
+<p><span class="math display">\[x^4 - u x^2 + v x\]</span></p>
+<p>with the real critical points satisfying the cubic equation</p>
+<p><span class="math display">\[4 x^3 - 2u x +  v = 0.\]</span></p>
+<p>See figure 6 for the minima and maxima of the unfolding for the the different configurations.</p>
+<figure>
+<table align="left" width="100%" id="FIG">
+<tr>
+<td>
+<img src='figures/Zeeman_1.png' width=90% />
+</td>
+<td>
+<img src='figures/Zeeman_2.png' width=90% />
+</td>
+<td>
+<img src='figures/Zeeman_3.png' width=90% />
+</td>
+</tr>
+<tr>
+<td>
+<img src='figures/Zeeman_4.png' width=90% />
+</td>
+<td>
+<img src='figures/Zeeman_5.png' width=90% />
+</td>
+<td>
+<img src='figures/Zeeman_6.png' width=90% />
+</td>
+</tr>
+<tr>
+<td>
+<img src='figures/Zeeman_7.png' width=90% />
+</td>
+<td>
+<img src='figures/Zeeman_8.png' width=90% />
+</td>
+<td>
+<img src='figures/Zeeman_9.png' width=90% />
+</td>
+</tr>
+</table>
+<figcaption>
+Fig. 6 - The unfolding of the cusp catastrophe. We vary <span class="math inline">\(u\)</span> along the horizontal and <span class="math inline">\(v\)</span> along the vertical directions
+</figcaption>
+</figure>
+<h4 id="caustics-in-optics">Caustics in optics</h4>
+<h3 id="proving-catastrophe-theory">Proving catastrophe theory</h3>
 </body>
 </html>
