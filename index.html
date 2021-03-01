@@ -19,6 +19,10 @@
   <!--[if lt IE 9]>
     <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
   <![endif]-->
+  <link rel = "icon" href = "figures/icon.jpg" type = "image/x-icon">
+  <div class="topnav">
+  <a href="https://www2.perimeterinstitute.ca/personal/jfeldbrugge/">Home</a> <a href="https://jfeldbrugge.github.io/">Projects and Code</a>
+  </div>
 </head>
 <body>
 <header id="title-block-header">
@@ -62,8 +66,8 @@ D^2g(\boldsymbol{0}) &amp;=(D \psi(\boldsymbol{0}))^T D^2f(\boldsymbol{0}) (D \p
 <p>As we will show below, the index of a nondegenerate critical point fully classifies the critical point up to coordinate transformations. For degenerate critical points, both the rank and the index play an important role in the classification.</p>
 <h2 id="nondegenerate-critical-points">Nondegenerate critical points</h2>
 <p>The classification of nondegenerate critical points is expressed by <strong>Morse Lemma</strong>, first described by Marston Morse in 1934. Note that the theorem was already anticipated by Arthur Cayley (1859) and James Clerk Maxwell (1870) in the study of contour lines in topography.</p>
-<p><strong>Morse Lemma:</strong> <em>Let <span class="math inline">\(f\)</span> vanish at <span class="math inline">\(\boldsymbol{0}\in U\)</span>. The origin is a nondegenerate critical point of <span class="math inline">\(f\)</span> with index <span class="math inline">\(s\)</span> if and only if a local diffeomorphism <span class="math inline">\(\psi\)</span> at <span class="math inline">\(\boldsymbol{0}\)</span> exists preserving the origin <span class="math inline">\(\psi(\boldsymbol{0})=\boldsymbol{0}\)</span> such that</em></p>
-<p><span class="math display">\[f(\psi(y)) = - y_1^2 - \dots - y_s^2 + y_{s+1}^2 + \dots + y_n^2\]</span></p>
+<p><strong>Morse Lemma:</strong> <em>Let <span class="math inline">\(f\)</span> vanish at <span class="math inline">\(\boldsymbol{0}\in U\)</span>. The origin is a nondegenerate critical point of <span class="math inline">\(f\)</span> with index <span class="math inline">\(s\)</span> if and only if a local diffeomorphism <span class="math inline">\(\psi\)</span> at <span class="math inline">\(\boldsymbol{0}\)</span> exists preserving the origin <span class="math inline">\(\psi(\boldsymbol{0})=\boldsymbol{0}\)</span>, with <span class="math inline">\(\boldsymbol{y}=\psi(\boldsymbol{x})\)</span> such that</em></p>
+<p><span class="math display">\[f(\psi(\boldsymbol{x})) = - y_1^2 - \dots - y_s^2 + y_{s+1}^2 + \dots + y_n^2\]</span></p>
 <p><em>holds around the origin.</em></p>
 <p><strong>Proof:</strong> <em>The Morse Lemma is proven in many textbooks on function theory. I will here simply refer to chapter one of <a href="https://www.routledge.com/Catastrophe-Theory-Second-Edition/Castrigiano-Hayes/p/book/9780813341255">Catastrophe Theory</a> by Domenico Castrigiano and Sandra Hayes.</em></p>
 <p>In the one-dimensional case, the lemma states that any nondegenerate critical points at the origin is either locally equivalent to a maximum <span class="math inline">\(f =f(0) -x^2\)</span> or a minimum <span class="math inline">\(f= f(0) + x^2\)</span> (see figure 1).</p>
@@ -116,13 +120,13 @@ Fig. 2 - Cylinder on an inclined slope, with two stable configurations (two righ
 </figcaption>
 </figure>
 <p>To quantify the system, note that the potential energy of the system <span class="math inline">\(V\)</span> is the gravitaitonal potential of the centre of mass <span class="math inline">\(C\)</span>. When the cylinder is rolled uphill by an angle <span class="math inline">\(\Theta_0\)</span>, we observe that the centre of the cylinder is raised by a distance <span class="math inline">\(\Theta_0 \sin \alpha\)</span> while the centre of mass moves down with respect to the centre by a distance <span class="math inline">\(r\sin \Theta_0\)</span>. The potential energy of the system is thus</p>
-<p><span class="math display">\[V(\Theta, \alpha) = \Theta \sin \alpha - r \sin \Theta + c(\alpha)\]</span></p>
-<p>with some function <span class="math inline">\(c(\alpha)\)</span> independent of the dynamical variable <span class="math inline">\(\Theta\)</span>. According to the equation of motion</p>
+<p><span class="math display">\[V(\Theta, \alpha) = \Theta \sin \alpha - r \sin \Theta + \cos \alpha.\]</span></p>
+<p>According to the equation of motion</p>
 <p><span class="math display">\[\frac{\mathrm{d}^2\Theta}{\mathrm{d}t^2} = -\frac{\partial V}{\partial\Theta} = -\sin \alpha +r \cos \Theta\]</span></p>
 <p>the cylinder is in an equillibrium configuration when</p>
 <p><span class="math display">\[\cos \Theta = \frac{\sin \alpha}{r}.\]</span></p>
 <p>For <span class="math inline">\(\alpha &lt; \alpha_c\)</span>, with the critical angle <span class="math inline">\(\alpha_c=\arcsin r\)</span>, this equation has two real solutions corresponding to global maximum and minimum of <span class="math inline">\(V\)</span>. For <span class="math inline">\(\alpha &gt; \alpha_0\)</span>, there is no stable configuration. Expanding the potential energy around the angle <span class="math inline">\(\alpha = \alpha_c\)</span>,</p>
-<p><span class="math display">\[V(\Theta, \alpha) = \frac{r}{6 }\Theta^3 + (\alpha - \alpha_c)\Theta \cos \alpha_c + c(\alpha) + \mathcal{O}(\alpha-\alpha_c),\]</span></p>
+<p><span class="math display">\[V(\Theta, \alpha) = \frac{r}{6 }\Theta^3 + (\alpha - \alpha_c)\Theta \cos \alpha_c + \cos \alpha + \mathcal{O}(\alpha-\alpha_c),\]</span></p>
 <p>we discover the degenerate critical point corresponding the fold catastrophe. As it turns out, this is the universal unfolding of the fold catastrophe. The normal form of the universal unfolding of the fold catastrophe is</p>
 <p><span class="math display">\[x^3+ ux,\]</span></p>
 <p>plotted in figure 3.</p>
@@ -145,7 +149,7 @@ Fig. 3 - The universal unfolding of fold catastrophe with the critical points in
 </figcaption>
 </figure>
 <h4 id="zeemans-catastrophe-machine">Zeeman’s catastrophe machine</h4>
-<p>The Zeeman catastrophe machine is a good example of a mechanical system illustrating the cusp catastrophe (first introduced by Zeeman 19..). Consider a disk with the centre <span class="math inline">\(C\)</span> (see figure 4). We allow the disk to freely rotate around its centre. Consider an elastric string connecting a fixed point <span class="math inline">\(A\)</span> to a point <span class="math inline">\(S\)</span> on the perimeter of the disk to a point <span class="math inline">\(P\)</span>. The angle <span class="math inline">\(\Theta\)</span> between the point <span class="math inline">\(A\)</span>, the centre of the disk <span class="math inline">\(C\)</span> and the point <span class="math inline">\(S\)</span> is the dynamical variable of the system. We are allowed to change the point <span class="math inline">\(P\)</span>. This is the external parameter of the system. The disk will rotate to minimize the potential energy in the string.</p>
+<p>The Zeeman catastrophe machine is a good example of a mechanical system illustrating the cusp catastrophe (first introduced by Christopher Zeeman (1969)). Consider a disk with the centre <span class="math inline">\(C\)</span> (see figure 4). We allow the disk to freely rotate around its centre. Consider an elastric string connecting a fixed point <span class="math inline">\(A\)</span> to a point <span class="math inline">\(S\)</span> on the perimeter of the disk to a point <span class="math inline">\(P\)</span>. The angle <span class="math inline">\(\Theta\)</span> between the point <span class="math inline">\(A\)</span>, the centre of the disk <span class="math inline">\(C\)</span> and the point <span class="math inline">\(S\)</span> is the dynamical variable of the system. We are allowed to change the point <span class="math inline">\(P\)</span>. This is the external parameter of the system. The disk will rotate to minimize the potential energy in the string.</p>
 <figure>
 <img src='figures/Zeeman.png' width=50% />
 <figcaption>
