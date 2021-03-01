@@ -90,7 +90,7 @@ Fig. 1 - An illustration the nondegenerate critical points of a one-dimensional 
 <p>A function with only nondegenerate critical points is known as a <strong>Morse function.</strong> Morse functions are dense in the space of smooth functions, <em>i.e.,</em> a generic function only includes nondegenerate critical points and a degenerate critical point decomposes into nondegenerate ones upon an infinitesimal perturbation of the function. As such, Morse functions play a fundamental role in both mathematics and many applications. Given these observations, one might doubt the relevance of the classification of degenerate points. However, as it turns out, degenerate critical points do frequently occur in applications when considering a family of continuously varying functions. Catastrophe theory extends Morse lemma to degenerate critical points. It describes the possible equivalence classes, determines how many terms in the Taylor series are required to distinguish a critical point, and shows how a critical point <strong>unfolds</strong> into nondegenerate critical points under a general perturbation.</p>
 <h2 id="catastrophe-theory">Catastrophe theory</h2>
 <p>Consider a continuous family of smooth function <span class="math inline">\(f_\boldsymbol{u}:U \to \mathbb{R}\)</span> with <span class="math inline">\(U\)</span> a open subset of <span class="math inline">\(\mathbb{R}^n\)</span> and with the external parameter <span class="math inline">\(\boldsymbol{u} = (u_1,u_2,\dots, u_d)\)</span>. René Thom’s main theorem of catastrophe theory states that when the number of external parameters does not exceed four (<span class="math inline">\(d \leq 4\)</span>), each ‘stable’ degenerate critical point is equivalent to one of the <span class="math inline">\(\boldsymbol{7}\)</span> elementary catastrophes</p>
-<p><span class="math display">\[x^3, x^4, x^5, x^6, x^3 + y^3, x^3 - x y^2, x^2 y + y^4,\]</span></p>
+<p><span class="math display">\[x^3, x^4, x^5, x^6, x^3 + y^3, x^3 - x y^2, \text{ and } x^2 y + y^4,\]</span></p>
 <p>up to coordinate transformations. These elementary catastrophes are known as the <strong>fold, cusp, swallowtail, butterfly, elliptic umbilic, hyperbolic umbilic,</strong> and <strong>parabolic umbilic</strong> catastrophes. The second major theorem of catastrophe theory describes how these degenerate critical points decompose into nondegenerate ones upon small perturbations. The <strong>unfolding</strong> of a critical point is <strong>versal</strong> when it includes all the possible ways in which the degenerate critical can decompose. The unfolding is <strong>universal</strong> when it is both versal and only uses a minimal number of parameters.</p>
 <p>Before describing the proofs of these theorems, we colloquially apply the theory to several physical toy models to introduce the relevant concepts.</p>
 <h3 id="physical-systems-with-catastrophes">Physical systems with catastrophes</h3>
@@ -218,6 +218,20 @@ Fig. 6 - The unfolding of the cusp catastrophe. We vary <span class="math inline
 </figcaption>
 </figure>
 <h4 id="caustics-in-optics">Caustics in optics</h4>
+<p>Another physical system with catastrophes in the form of caustics can be found in optics. These caustic play a fundamental role in both lensing and reflection problems. To demonstrate this, consider the reflection of a beam of light by a circular mirror (figure 7). This caustic can be observed in the reflection of light in a coffee cup. For more details of the coffeecup caustic see <a href="https://arxiv.org/abs/math/0411189v1">Symmetries of the Coffeecup Caustic</a> by Brendan Guilfoyle, Wilhelm Klingenberg.</p>
+<figure>
+<tr>
+<td>
+<img src='figures/CircularMirror.png' width=64% />
+</td>
+<td>
+<img src='figures/CoffeeCup.jpg' width=35% />
+</td>
+</tr>
+<figcaption>
+Fig. 7 - The light rays of a circular mirror
+</figcaption>
+</figure>
 <h3 id="proving-catastrophe-theory">Proving catastrophe theory</h3>
 </body>
 </html>
