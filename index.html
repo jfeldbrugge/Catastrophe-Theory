@@ -69,7 +69,7 @@ D^2g(\boldsymbol{0}) &amp;=(D \psi(\boldsymbol{0}))^T D^2f(\boldsymbol{0}) (D \p
 <p><strong>Morse lemma:</strong> <em>Let <span class="math inline">\(f\)</span> be a smooth function of <span class="math inline">\(n\)</span> variables with a critical point at the origin with index <span class="math inline">\(s\)</span>. The critical point is nondegenerate if and only if there exists a local diffeomorphism <span class="math inline">\(\psi\)</span> which preserves the origin <span class="math inline">\(\psi(\boldsymbol{0})=\boldsymbol{0}\)</span> for which</em></p>
 <p><span class="math display">\[f(\psi(\boldsymbol{x})) =f(\boldsymbol{0}) - x_1^2 - \dots - x_s^2 + x_{s+1}^2 + \dots + x_n^2\]</span></p>
 <p><em>in the vicinity of the origin.</em></p>
-<p><strong>Proof:</strong> <em>The Morse lemma is proven in many textbooks on function theory. It is based on the diagonalization of symmetric matrices and the implicit function theory. I will here simply refer to chapter one of <a href="https://www.routledge.com/Catastrophe-Theory-Second-Edition/Castrigiano-Hayes/p/book/9780813341255">Catastrophe Theory</a> by Domenico Castrigiano and Sandra Hayes.</em></p>
+<p><strong>Proof:</strong> <em>The Morse lemma can be proven using the diagonalization of symmetric matrices and the implicit function theory. I provide a detailed proof in the next section. One can also find a proof in chapter one of <a href="https://www.routledge.com/Catastrophe-Theory-Second-Edition/Castrigiano-Hayes/p/book/9780813341255">Catastrophe Theory</a> by Domenico Castrigiano and Sandra Hayes.</em></p>
 <p>In the one-dimensional case, the lemma states that any nondegenerate critical points at the origin is either locally equivalent to a maximum <span class="math inline">\(f =f(0) -x^2\)</span> or a minimum <span class="math inline">\(f= f(0) + x^2\)</span> (see figure 1).</p>
 <figure>
 <table align="left" width="100%" id="FIG">
@@ -226,21 +226,49 @@ Fig. 6 - The unfolding of the cusp catastrophe. We vary <span class="math inline
 <img src='figures/CircularMirror.png' width=64% />
 </td>
 <td>
-<img src='figures/CoffeeCup.jpg' width=35% />
+<img src='figures/CoffeeCup.png' width=35% />
 </td>
 </tr>
 <figcaption>
 Fig. 7 - The light rays of a circular mirror
 </figcaption>
 </figure>
-<h3 id="proving-catastrophe-theory">Proving catastrophe theory</h3>
+<h3 id="catastrophe-theory-1">Catastrophe theory</h3>
 <p>Morse lemma shows that for any nondegenerate critical point of a <span class="math inline">\(n\)</span>-dimensional function there exist local coordinates for which the function is a sum of quadratic terms, its normal form. Catastrophe theory mirrors this theorem for degenerate critical points. The reduction lemma (first proved in 1969 by D. Grommoll and W. Meyer) provides the first step towards this goal.</p>
 <p><strong>Reduction lemma:</strong> <em>Around a degenerate critical point <span class="math inline">\(\boldsymbol{0}\)</span> of a smooth function <span class="math inline">\(f\)</span> of <span class="math inline">\(n\)</span> variables with rank <span class="math inline">\(r\)</span> and index <span class="math inline">\(s\)</span>, there exists a local diffeomorphism <span class="math inline">\(\psi\)</span> preserving the origin, such that the function can be expressed as the sum</em></p>
 <p><span class="math display">\[f(\psi(\boldsymbol{x})) = f(\boldsymbol{0}) + q_{sr}(x_1,\dots, x_r) +g(x_{r+1},\dots,x_{n}),\]</span></p>
 <p><em>where <span class="math inline">\(q_{sr}\)</span> is a nondegenerate normal form in <span class="math inline">\(r\)</span> variables, vanishing at the origin, with a critical point at the origin with index <span class="math inline">\(s\)</span>, and <span class="math inline">\(g\)</span> is a smooth function of <span class="math inline">\(n-r\)</span> variables, vanishing at the origin, with a critical point at the origin that is <strong>totally degenerate</strong> (has vanishing rank). Note that using Morse lemma, we can select coordinates for which</em></p>
 <p><span class="math display">\[q_{sr}(x_1,\dots, x_r) = -x_1^2 -\dots - x_s^2 + x_{s+1}^2+\dots + x_{r}^2.\]</span></p>
-<p><em>The rank and the index completely classifies the nondegenerate part of the critical point. The function <span class="math inline">\(g\)</span> is known as the <strong>residual singularity</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(0\)</span>.</em></p>
+<p><em>The rank and the index completely classifies the nondegenerate part of the critical point. The function <span class="math inline">\(g\)</span> is known as the <strong>residual singularity</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(\boldsymbol{0}\)</span>.</em></p>
 <p><strong>Proof:</strong> <em>The proof of the reduction lemma is based on the diagonalization of symmetric matrices and can be found in many textbooks on catastrophe theory. I will here simply refer to chapter three of <a href="https://www.routledge.com/Catastrophe-Theory-Second-Edition/Castrigiano-Hayes/p/book/9780813341255">Catastrophe Theory</a> by Domenico Castrigiano and Sandra Hayes.</em></p>
 <p>Using the reduction lemma we can always write a degenerate critical point as a nondegenerate part, classified by the Morse lemma, and a totally degenerate part. This reduces the classification of degenerate critical points to the classification of totally degenerate ones. Note that when a degenerate critical point has rank <span class="math inline">\(r\)</span>, the residual singularity <span class="math inline">\(g\)</span> is a function of <span class="math inline">\(n-r\)</span> variables. This quantity plays an important role in catastrophe theory and is known as the <strong>corank</strong> of <span class="math inline">\(f\)</span>. It follows that the corank is a measure of the degree of degeneracy of the critical point. When the corank vanishes, the critical point is nondegenerate. When the corank is unity, it suffices the classify a totally degenerate critical point in a single variable. When the corank is two, we need to look for the classification of a totally degenerate critical point in two variables.</p>
+<h3 id="proving-some-theorems">Proving some theorems</h3>
+<p>To complete the classification theorem but keep the flow of the reasoning, we here give some proves of some of the lemmas and theorems.</p>
+<p><strong>Morse lemma:</strong> <em>Let <span class="math inline">\(f\)</span> be a smooth function of <span class="math inline">\(n\)</span> variables with a critical point at the origin with index <span class="math inline">\(s\)</span>. The critical point is nondegenerate if and only if there exists a local diffeomorphism <span class="math inline">\(\psi\)</span> which preserves the origin <span class="math inline">\(\psi(\boldsymbol{0})=\boldsymbol{0}\)</span> for which</em></p>
+<p><span class="math display">\[f(\psi(\boldsymbol{x})) =f(\boldsymbol{0}) - x_1^2 - \dots - x_s^2 + x_{s+1}^2 + \dots + x_n^2\]</span></p>
+<p><em>in the vicinity of the origin.</em></p>
+<p><strong>Proof:</strong> <em>For <span class="math inline">\(f\)</span> in the given form, the function indeed has a nondegenerate critical point at the origin with the index <span class="math inline">\(s\)</span>. Conversely, write <span class="math inline">\(f\)</span> as</em></p>
+<p><span class="math display">\[
+\begin{align}
+f(x_1,\dots, x_n) &amp;= f(\boldsymbol{0}) + \int_0^1 \frac{\mathrm{d}f}{\mathrm{d}t}(tx_1,\dots, t x_n) \mathrm{d}t\\
+&amp;=f(0) + \int_0^1 \sum_{i=1}^n \frac{\partial f}{\partial x_i} (tx_1,\dots, t x_n) x_i \mathrm{d}t,
+\end{align}
+\]</span></p>
+<p><em>using the chain rule. Define the new functions <span class="math inline">\(g_i(x_1,\dots,x_n) = \int_0^1 \frac{\partial f}{\partial x_i} (tx_1,\dots, tx_n)\mathrm{d}t\)</span> and write <span class="math inline">\(f\)</span> as</em></p>
+<p><span class="math display">\[f(x_1,\dots, x_n) = f(\boldsymbol{0}) + \sum_{i=1}^n x_i g_i(x_1,\dots, x_n).\]</span></p>
+<p><em>Since <span class="math inline">\(f\)</span> is assumed to have a critical point at the origin, we find <span class="math inline">\(\frac{\partial f(\boldsymbol{0})}{\partial x_i} = g_i(\boldsymbol{0}) = 0\)</span>. Repeating the above described process for <span class="math inline">\(g_i\)</span>, we obtain the formula</em></p>
+<p><span class="math display">\[g_i(x_1,\dots,x_n) = \sum_{j=1}^n x_j h_{ij}(x_1,\dots,x_n),\]</span></p>
+<p><em>for smooth functions <span class="math inline">\(h_{ij}\)</span>. We can thus write <span class="math inline">\(f\)</span> as</em></p>
+<p><span class="math display">\[f(x_1,\dots,x_n) = f(\boldsymbol{0}) + \sum_{i,j=1}^n x_i x_j \bar{h}_{ij}(x_1,\dots,x_n),\]</span></p>
+<p><em>with the symmetrized functions <span class="math inline">\(\bar{h}_{ij} = \frac{1}{2}(h_{ij}+h_{ji}).\)</span></em></p>
+<p><em>Since the Hessian <span class="math inline">\((\bar{h}_{ij}(\boldsymbol{0})\)</span> is nonsingular. We have thus obtained a real symmetric form for <span class="math inline">\(f\)</span> which we can diagonalise in a neighbourhood of the origin using induction. For the first term, we can use the change of coordinates</em></p>
+<p><span class="math display">\[y_1 = |\bar{h}_{11}|^{1/2}\left(x_1 + \sum_{i=2}^n x_i \bar{h}_{i1}/|\bar{h}_{11}|\right)\]</span></p>
+<p><em>and <span class="math inline">\(y_i = x_i\)</span> for <span class="math inline">\(i=2,\dots, n\)</span>, to replace the dependence on <span class="math inline">\(x_1\)</span> by the simple quadratic form <span class="math inline">\(\pm y_1^2\)</span>. Suppose we managed to carry this forward till the <span class="math inline">\(i=m-1\)</span>-th term</em></p>
+<p><span class="math display">\[f = f(\boldsymbol{0}) \pm y_1^2 \pm \dots \pm y_{m-1}^2 + \sum_{i,j = m}^n y_i y_n H_{ij}(y_1,\dots, y_n)\]</span></p>
+<p><em>where <span class="math inline">\(H_{ij}\)</span> is a new symmetric function. Changing coordinates again to <span class="math inline">\(v_i = y_i\)</span> when <span class="math inline">\(i \neq m\)</span> and</em></p>
+<p><span class="math display">\[v_m = |H_{mm}|^{1/2}\left(y_m + \sum_{i=m+1}^n y_i H_{im}/|H_{mm}|\right),\]</span></p>
+<p><em>we obtain the expression</em></p>
+<p><span class="math display">\[f=f(\boldsymbol{0}) \pm v_1^2 \pm \dots \pm v_m^2 + \sum_{i,j=m+1}^n v_i v_j H&#39;_{ij}(v_1,\dots, v_n)\]</span></p>
+<p><em>with again a symmetric function <span class="math inline">\(H&#39;_{ij}\)</span>. Continuing this process till we have eliminated the summation symbol gives the required quadratic form after a simple reordering.</em></p>
 </body>
 </html>
