@@ -39,7 +39,7 @@
 \begin{pmatrix}
 \partial_{1}^2 f(\boldsymbol{0}) &amp; \partial_1 \partial_2 f(\boldsymbol{0}) &amp; \dots &amp; \partial_1 \partial_n f(\boldsymbol{0})\\
 \partial_2 \partial_1 f(\boldsymbol{0}) &amp; \partial_{2}^2 f(\boldsymbol{0}) &amp; \dots &amp; \partial_2 \partial_n f(\boldsymbol{0})\\
-\vdots  &amp; \vdots  &amp; \ddots &amp; \vdots\\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
 \partial_n \partial_1 f(\boldsymbol{0}) &amp; \partial_n \partial_2 f(\boldsymbol{0}) &amp; \dots &amp; \partial_{n}^2 f(\boldsymbol{0})
 \end{pmatrix}.
 \]</span></p>
@@ -55,7 +55,7 @@ D^2g(\boldsymbol{0}) &amp;=(D \psi(\boldsymbol{0}))^T D^2f(\boldsymbol{0}) (D \p
 \begin{pmatrix}
 \partial_{1} \psi_1(\boldsymbol{0}) &amp; \partial_1 \psi_2(\boldsymbol{0}) &amp; \dots &amp; \partial_1 \psi_n(\boldsymbol{0})\\
 \partial_2 \psi_1(\boldsymbol{0}) &amp; \partial_{2} \psi_2(\boldsymbol{0}) &amp; \dots &amp; \partial_2 \psi_n(\boldsymbol{0})\\
-\vdots  &amp; \vdots  &amp; \ddots &amp; \vdots\\
+\vdots &amp; \vdots &amp; \ddots &amp; \vdots\\
 \partial_n \psi_1(\boldsymbol{0}) &amp; \partial_n \psi_2(\boldsymbol{0}) &amp; \dots &amp; \partial_{n} \psi_n(\boldsymbol{0})
 \end{pmatrix}.
 \]</span></p>
@@ -218,7 +218,7 @@ Fig. 6 - The unfolding of the cusp catastrophe. We vary <span class="math inline
 </figcaption>
 </figure>
 <h4 id="caustics-in-optics">Caustics in optics</h4>
-<p>Another physical system with catastrophes in the form of caustics can be found in optics. These caustic are regions in space where the intensity spikes and as such play a fundamental role in both lensing and reflection problems. To demonstrate the emergence of the fold and the cusp caustics in optics, consider the reflection of a beam of light by the lower hempisphere of a circular mirror in the geometric approximation (figure 7). For the reflection by a complete circular mirror see figure 8. The caustic occurs as the envelope of the light paths. This caustic can be observed in the reflection of light in a coffee cup. For more details of the coffeecup caustic see <a href="https://arxiv.org/abs/math/0411189v1">Symmetries of the Coffeecup Caustic</a> by Brendan Guilfoyle, Wilhelm Klingenberg. This caustic is incidentally also relevant to the formation of rainbows. Each raindrop reflects the sun’s rays at its internal sphere to form a cone-like caustic. Different wavelengths lead to a slightly different cone due to the refractive nature of water. This refractive effect leads to the separation of colours which we observe in the sky. There is of course a lot more to the formation of rainbows. For a detailed description see <a href="https://www.perlego.com/book/111558/catastrophe-theory-and-its-applications-pdf">Catastrophe theory and its applications</a> by Tim Poston and Ian Stewart.</p>
+<p>Another physical system with catastrophes in the form of caustics can be found in optics. These caustic are regions in space where the intensity spikes and as such play a fundamental role in both lensing and reflection problems. To demonstrate the emergence of the fold and the cusp caustics in optics, consider the reflection of a beam of light by the right hemisphere of a circular mirror in the geometric approximation (figure 7). For the reflection by a complete circular mirror see figure 8. The caustic occurs as the envelope of the light paths. This caustic can be observed in the reflection of light in a coffee cup. For more details of the coffeecup caustic see <a href="https://arxiv.org/abs/math/0411189v1">Symmetries of the Coffeecup Caustic</a> by Brendan Guilfoyle, Wilhelm Klingenberg. This caustic is incidentally also relevant to the formation of rainbows. Each raindrop reflects the sun’s rays at its internal sphere to form a cone-like caustic. Different wavelengths lead to a slightly different cone due to the refractive nature of water. This refractive effect leads to the separation of colours which we observe in the sky. There is of course a lot more to the formation of rainbows. For a detailed description see <a href="https://www.perlego.com/book/111558/catastrophe-theory-and-its-applications-pdf">Catastrophe theory and its applications</a> by Tim Poston and Ian Stewart.</p>
 <p><strong>Fermat’s principle of least time</strong> provides a natural explanation for the relevance of catastrophes and caustics in optics. A path from the source to a point in space is a classical ray if and only if it is a real critical point of the time it takes to travel from the source to point in space. When the time function <span class="math inline">\(t\)</span> has <span class="math inline">\(m\)</span> of critical points, the point receives light from <span class="math inline">\(m\)</span> light rays. The caustics at which the intensity spikes directly correspond to the degenerate critical points of these time function. Note that when the time function at the degenerate critical point scales like <span class="math inline">\(t^3,\)</span> it forms a fold caustic. The fold catastrophes form lines in configuration space. When the time function scales like <span class="math inline">\(t^4\)</span> at the degenerate critical point, the point corresponds to a cusp caustic. The cusp is realized as a non-differentiable point on a fold line.</p>
 <figure>
 <tr>
@@ -245,13 +245,13 @@ Fig. 8 - The light rays of a circular mirror with an increasing number of reflec
 <p>Morse lemma shows that for any nondegenerate critical point of a <span class="math inline">\(n\)</span>-dimensional function there exist local coordinates for which the function is a sum of quadratic terms, its normal form. Catastrophe theory mirrors this theorem for degenerate critical points. The reduction lemma (first proved in 1969 by D. Grommoll and W. Meyer) provides the first step towards this goal.</p>
 <p><strong>Reduction lemma:</strong> <em>Around a degenerate critical point <span class="math inline">\(\boldsymbol{0}\)</span> of a smooth function <span class="math inline">\(f\)</span> of <span class="math inline">\(n\)</span> variables with rank <span class="math inline">\(r\)</span> and index <span class="math inline">\(s\)</span>, there exists a local diffeomorphism <span class="math inline">\(\psi\)</span> preserving the origin, such that the function can be expressed as the sum</em></p>
 <p><span class="math display">\[f(\psi(\boldsymbol{x})) = f(\boldsymbol{0}) + q_{sr}(x_1,\dots, x_r) +g(x_{r+1},\dots,x_{n}),\]</span></p>
-<p><em>where <span class="math inline">\(q_{sr}\)</span> is a nondegenerate normal form in <span class="math inline">\(r\)</span> variables, vanishing at the origin, with a critical point at the origin with index <span class="math inline">\(s\)</span>, and <span class="math inline">\(g\)</span> is a smooth function of <span class="math inline">\(n-r\)</span> variables, vanishing at the origin, with a critical point at the origin that is <strong>totally degenerate</strong> (has vanishing rank). Note that using Morse lemma, we can select coordinates for which</em></p>
+<p><em>where <span class="math inline">\(q_{sr}\)</span> is a nondegenerate normal form in <span class="math inline">\(r\)</span> variables, vanishing and with a critical point at the origin with index <span class="math inline">\(s\)</span>, and <span class="math inline">\(g\)</span> is a smooth function of <span class="math inline">\(n-r\)</span> variables, vanishing and with a critical point at the origin that is <strong>totally degenerate</strong> (has vanishing rank). Note that using Morse lemma, we can select coordinates for which</em></p>
 <p><span class="math display">\[q_{sr}(x_1,\dots, x_r) = -x_1^2 -\dots - x_s^2 + x_{s+1}^2+\dots + x_{r}^2.\]</span></p>
 <p><em>The rank and the index completely classifies the nondegenerate part of the critical point. The function <span class="math inline">\(g\)</span> is known as the <strong>residual singularity</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(\boldsymbol{0}\)</span>.</em></p>
 <p><strong>Proof:</strong> <em>The proof of the reduction lemma is based on the diagonalization of symmetric matrices and can be found in many textbooks on catastrophe theory. I will here simply refer to chapter three of <a href="https://www.routledge.com/Catastrophe-Theory-Second-Edition/Castrigiano-Hayes/p/book/9780813341255">Catastrophe Theory</a> by Domenico Castrigiano and Sandra Hayes.</em></p>
 <p>Using the reduction lemma we can always write a degenerate critical point as a nondegenerate part, classified by the Morse lemma, and a totally degenerate part. This reduces the classification of degenerate critical points to the classification of totally degenerate ones. Note that when a degenerate critical point has rank <span class="math inline">\(r\)</span>, the residual singularity <span class="math inline">\(g\)</span> is a function of <span class="math inline">\(n-r\)</span> variables. This quantity plays an important role in catastrophe theory and is known as the <strong>corank</strong> of <span class="math inline">\(f\)</span>. It follows that the corank is a measure of the degree of degeneracy of the critical point. When the corank vanishes, the critical point is nondegenerate. When the corank is unity, it suffices the classify a totally degenerate critical point in a single variable. When the corank is two, we need to look for the classification of a totally degenerate critical point in two variables.</p>
 <h4 id="local-equivalence-classes">Local equivalence classes</h4>
-<p>To develop a classification of totally degenerate critical points upto coordinate transformations, we need to develop some algebraic notation. First, we will develop a notion of locality known as the <strong>germ</strong> of the function. The germ allows us to restrict attention to the behavior the function in the vicinity of a point <span class="math inline">\(\boldsymbol{p}\)</span>.</p>
+<p>To develop a classification of totally degenerate critical points up to coordinate transformations, we need to develop some algebraic notation. First, we will develop a notion of locality known as the <strong>germ</strong> of the function. The germ allows us to restrict attention to the behaviour of the function in the vicinity of a point <span class="math inline">\(\boldsymbol{p}\)</span>.</p>
 <p><strong>Definition:</strong> <em>For <span class="math inline">\(m,n\in \mathbb{N}\)</span> and <span class="math inline">\(\boldsymbol{p} \in \mathbb{R}^n\)</span>, consider the set of smooth functions</em></p>
 <p><span class="math display">\[\{f:U \to \mathbb{R}^m | U \text{ an open set in } \mathbb{R}^n \text{ including the point } p\}.\]</span></p>
 <p><em>Two functions in this set <span class="math inline">\(f_1:U_1 \to \mathbb{R}^m\)</span> and <span class="math inline">\(f_2:U_2\to \mathbb{R}^m\)</span>, with <span class="math inline">\(\boldsymbol{p} \in U_1 \cap U_2\)</span>, are defined to be equivalent <span class="math inline">\(f_1 \sim f_2\)</span>, when they coincide on the overlap of their definition, i.e., <span class="math inline">\(f_1|_{U_1 \cap U_2} =f_2|_{U_1 \cap U_2}.\)</span> Locally, <span class="math inline">\(f_1\)</span> and <span class="math inline">\(f_2\)</span> are indistinguishable. Using this equivalence relation, we construct the <strong>germ</strong></em></p>
@@ -262,24 +262,24 @@ Fig. 8 - The light rays of a circular mirror with an increasing number of reflec
 <p>and multiplication of germs as</p>
 <p><span class="math display">\[ [f_1][f_2] = [ (f_1|_V) (f_2|_V)],\]</span></p>
 <p>with <span class="math inline">\(f_i|_V: V \to \mathbb{R}\)</span> the restriction of <span class="math inline">\(f_i\)</span> to the overlap <span class="math inline">\(V= U_1 \cap U_2\)</span>. From these definitions it follows that the algebra <span class="math inline">\(\boldsymbol{\mathcal{E}}\)</span> has a zero <span class="math inline">\([0]\)</span> and an unit germ <span class="math inline">\([1]\)</span> where <span class="math inline">\(0\)</span> and <span class="math inline">\(1\)</span> are interpreted as the constant functions <span class="math inline">\(\mathbb{R}^n \to \mathbb{R}\)</span> defined by <span class="math inline">\(\boldsymbol{x} \mapsto 0\)</span> and <span class="math inline">\(\boldsymbol{x} \mapsto 1\)</span>. A germ <span class="math inline">\([f] \in \boldsymbol{\mathcal{E}}\)</span> is invertible with the inverse <span class="math inline">\([1/f]\)</span> if and only if <span class="math inline">\(f\)</span> does not vanish at the origin. In this case, there exists a open neighborbood of the origin for which the recipical <span class="math inline">\(1/f\)</span> is well defined.</p>
-<p>The notion of a germs is very powerful algebraic construct, as it implements a very concrete notion of locality. However, germs can be difficult to work with in practice. For smooth functions, it is natural to develop a more practical notion of locality using the famous Taylor series,</p>
+<p>The notion of a germs is a very powerful algebraic construct, as it implements a very concrete notion of locality. However, germs can be difficult to work with in practice. For smooth functions, it is natural to develop a more practical notion of locality using the famous Taylor series,</p>
 <p><span class="math display">\[T(f) \equiv \sum_{\boldsymbol{\nu} \in \mathcal{N}_0^n} \frac{1}{\boldsymbol{\nu}!} D^\boldsymbol{\nu} f(\boldsymbol{0}) \boldsymbol{x}^\boldsymbol{\nu},\]</span></p>
 <p>where <span class="math inline">\(\boldsymbol{\nu}\)</span> is a multi-tuple <span class="math inline">\(\boldsymbol{\nu}=(\nu_1,\dots, \nu_n)\)</span> with the factorial defined as <span class="math inline">\(\boldsymbol{\nu}! = \nu_1!\dots \nu_n!\)</span>, the natural power defined as <span class="math inline">\(\boldsymbol{x}^\boldsymbol{\nu} = x_1^{\nu_1} \dots x_n^{\nu_n}\)</span> and the derivative <span class="math inline">\(D^\boldsymbol{\nu}\)</span> defined as the product of the <span class="math inline">\(\nu_i\)</span>-th partial derivative in the <span class="math inline">\(x_i\)</span> direction for <span class="math inline">\(i=1,\dots, n\)</span>. The Taylor series of two equivalent functions in a germ are identical since if <span class="math inline">\(f \sim g\)</span> then <span class="math inline">\(D^\boldsymbol{\nu} f(\boldsymbol{0}) = D^\boldsymbol{\nu} g(\boldsymbol{0})\)</span> for all <span class="math inline">\(\boldsymbol{\nu}\)</span>. However note that two functions with equal Taylor polynomials are not necessarily in the same term. For example, the Taylor series of the constant function <span class="math inline">\(0\)</span> and the function <span class="math inline">\(e^{-1/x^2}\)</span> coincide, but the two functions are not in the same germ at <span class="math inline">\(x=0\)</span>. Alternatively, the two functions <span class="math inline">\(f(x)=x\)</span> and <span class="math inline">\(g(x)=2(e^x-1)\)</span> are equivalent in the neighborhood of the origin, but do not have the same Taylor series.</p>
 <p><strong>Definition:</strong> <em>Two germs <span class="math inline">\([f]\)</span> and <span class="math inline">\([g]\)</span> in <span class="math inline">\(\boldsymbol{\mathcal{E}}\)</span> are <span class="math inline">\(k\)</span>-equivalent if the <span class="math inline">\(k\)</span>-th order Taylor series coincide, i.e., <span class="math inline">\(D^\boldsymbol{\nu} f(\boldsymbol{0}) =D^\boldsymbol{\nu} g(\boldsymbol{0})\)</span> for all <span class="math inline">\(n\)</span>-tuples <span class="math inline">\(\boldsymbol{\nu} \in \mathbb{N}_0^n\)</span> for which <span class="math inline">\(|\boldsymbol{\nu}| = \nu_1 + \dots + \nu_n \leq k\)</span>. The set of all germs <span class="math inline">\(k\)</span>-equivalent to the germ <span class="math inline">\([f]\)</span> is called the <strong><span class="math inline">\(k\)</span>-jet</strong> of <span class="math inline">\([f]\)</span>. We write the <span class="math inline">\(k\)</span>-jet as <span class="math inline">\(j^k[f]\)</span>. The set of all <span class="math inline">\(k\)</span>-jets in <span class="math inline">\(\boldsymbol{\mathcal{E}}\)</span> is the jet-space <span class="math inline">\(J^k\)</span>.</em></p>
 <p>Two germs are in the same <span class="math inline">\(k\)</span>-jet when their <span class="math inline">\(k\)</span>-th order Taylor series coincide. Conversely, we can define this jet space <span class="math inline">\(j^k[f]\)</span> as the space of germs of smooth functions with the <span class="math inline">\(k\)</span>-th Taylor series</p>
 <p><span class="math display">\[T^k(f) \equiv \sum_{\boldsymbol{\nu} \leq k} \frac{1}{\boldsymbol{\nu}!} D^\boldsymbol{\nu} f(\boldsymbol{0}) \boldsymbol{x}^\boldsymbol{\nu}.\]</span></p>
 <p>This is a more practical notion of locality as it is fully determined by a finite number of coefficients.</p>
-<p>The germs and jet space provide a notion of locality for functions. To classify the nondegenerate critical points of a function upon the equivalence class of local coordiante transformations, we need a local notion for the coordinate transformations. Define the group <span class="math inline">\(\boldsymbol{\mathcal{G}}\)</span> of germs <span class="math inline">\([\psi]\)</span> of local diffeomorphisms <span class="math inline">\(\psi\)</span> at the origin leaving the origin invariant. The product of two such germs <span class="math inline">\([\varphi], [\psi] \in \boldsymbol{\mathcal{G}}\)</span> is defined germ of the composition <span class="math inline">\([\varphi][\psi] = [\varphi \circ{} \psi]\)</span> where the diffeomorphism are restricted to a sufficiently small open neighborhood of the origin. We can easily proof that the set <span class="math inline">\(\boldsymbol{\mathcal{G}}\)</span> is indeed a group, with the identity element <span class="math inline">\([\text{id}]\)</span> defined by <span class="math inline">\(id:x \mapsto x\)</span> and where every element <span class="math inline">\([\psi]\)</span> has an inverse <span class="math inline">\([\psi^{-1}]\)</span>.</p>
+<p>The germs and jet space provide a notion of locality for functions. To classify the nondegenerate critical points of a function upon the equivalence class of local coordinate transformations, we need a local notion for the coordinate transformations. Define the group <span class="math inline">\(\boldsymbol{\mathcal{G}}\)</span> of germs <span class="math inline">\([\psi]\)</span> of local diffeomorphisms <span class="math inline">\(\psi\)</span> at the origin leaving the origin invariant. The product of two such germs <span class="math inline">\([\varphi], [\psi] \in \boldsymbol{\mathcal{G}}\)</span> is defined germ of the composition <span class="math inline">\([\varphi][\psi] = [\varphi \circ{} \psi]\)</span> where the diffeomorphism are restricted to a sufficiently small open neighborhood of the origin. We can easily proof that the set <span class="math inline">\(\boldsymbol{\mathcal{G}}\)</span> is indeed a group, with the identity element <span class="math inline">\([\text{id}]\)</span> defined by <span class="math inline">\(id:x \mapsto x\)</span> and where every element <span class="math inline">\([\psi]\)</span> has an inverse <span class="math inline">\([\psi^{-1}]\)</span>.</p>
 <p>The group of local diffeomorphism germs <span class="math inline">\(\boldsymbol{\mathcal{G}}\)</span> acts on the space of function germs <span class="math inline">\(\boldsymbol{\mathcal{G}}\)</span> by the composition action</p>
 <p><span class="math display">\[\boldsymbol{\mathcal{E}} \times \boldsymbol{\mathcal{G}} \to \boldsymbol{\mathcal{E}}: ([f],[\psi]) \mapsto [f\circ{} \psi],\]</span></p>
-<p>where we restrict the function <span class="math inline">\(f\)</span> and the diffeomorphism <span class="math inline">\(\psi\)</span> to the appropriate overlaps. This finally allows us to define the appropriate notion of equivalence upto coordiante transformations.</p>
+<p>where we restrict the function <span class="math inline">\(f\)</span> and the diffeomorphism <span class="math inline">\(\psi\)</span> to the appropriate overlaps. This finally allows us to define the appropriate notion of equivalence up to coordinate transformations.</p>
 <p><strong>Definition:</strong> <em>Two function germs <span class="math inline">\([f]\)</span> and <span class="math inline">\([g]\)</span> in <span class="math inline">\(\boldsymbol{\mathcal{E}}\)</span> are <strong>equivalent</strong> if there is a diffeomorphism germ <span class="math inline">\([\psi]\)</span> in <span class="math inline">\(\boldsymbol{\mathcal{G}}\)</span> such that <span class="math inline">\([g] = [f][\psi]\)</span>. The set of all function germs equivalent to <span class="math inline">\([f]\)</span> is known as <strong>the orbit of <span class="math inline">\([f]\)</span> under <span class="math inline">\(\mathcal{G}\)</span></strong>,</em></p>
 <p><span class="math display">\[[f]\boldsymbol{\mathcal{G}} \equiv \{[f][\psi] | [\psi] \in \boldsymbol{\mathcal{G}}\}.\]</span></p>
 <p>In terms of this more sophisticated language, we see that the Morse lemma states that the germ of a nondegenerate critical point at the origin, vanishing at the origin, is in the orbit of one of the normal quadratic forms <span class="math inline">\(q_{sn}(\boldsymbol{x})=-x_1^2 - \dots - x_{s}^2 + x_{s+1}^2 + \dots + x_n^2\)</span>.</p>
 <p>Given the two notions of locality, we can study when the two notions agree.</p>
 <p><strong>Definition:</strong> <em>A germ <span class="math inline">\([f] \in \boldsymbol{\mathcal{E}}\)</span> is called <strong><span class="math inline">\(k\)</span>-determined</strong> if every germ that is <span class="math inline">\(k\)</span>-equivalent to <span class="math inline">\([f]\)</span> is equivalent to <span class="math inline">\([f]\)</span>. A germ is <strong>finitely determined</strong> if it is <span class="math inline">\(k\)</span>-determined for some <span class="math inline">\(k &lt; \infty\)</span>. When a germ <span class="math inline">\([f]\)</span> is finitely determined, then the smallest <span class="math inline">\(k\)</span> for which <span class="math inline">\([f]\)</span> is <span class="math inline">\(k\)</span>-determined is refered to as the <strong>determinancy of <span class="math inline">\([f]\)</span></strong> and denoted by <span class="math inline">\(\text{det}[f]\)</span>. When the germ <span class="math inline">\([f]\)</span> is infintely determined we write <span class="math inline">\(\text{det}[f] = \infty\)</span>.</em></p>
-<p>In order to study germs in terms of jet-spaces we need to know: when is a germ <span class="math inline">\([f]\in \boldsymbol{\mathcal{E}}\)</span> finitely determined and how do we determine the determinancy of <span class="math inline">\([f]\)</span>? When we can answer these questions, we have reduced the notion of locality to the study of a finite number of coefficients in the <span class="math inline">\(k\)</span>-th order Taylor series!</p>
-<p>We can answer this using the algebraic notion of the maximal and the Jaccobi ideals.</p>
+<p>To study germs in terms of jet-spaces we need to know: when is a germ <span class="math inline">\([f]\in \boldsymbol{\mathcal{E}}\)</span> finitely determined and how do we determine the determinacy of <span class="math inline">\([f]\)</span>? When we can answer these questions, we have reduced the notion of locality to the study of a finite number of coefficients in the <span class="math inline">\(k\)</span>-th order Taylor series!</p>
+<p>We can answer this using the algebraic notion of the maximal and the Jacobi ideals.</p>
 <p><strong>Definition:</strong> <em>The maximal ideal <span class="math inline">\(m^k\)</span> is defined as all germs for which the first <span class="math inline">\(k-1\)</span> order derivatives vanish</em></p>
 <p><span class="math display">\[m^k=\{[f] \in \boldsymbol{\mathcal{E}}| D^\boldsymbol{\nu} = 0\text{ for all } |\boldsymbol{\nu}|&lt;k\}.\]</span></p>
 <p>We can also write this ideal as <span class="math inline">\(m^k = \langle x^\boldsymbol{\nu}| |\boldsymbol{\nu} = k\rangle\)</span>. Note that <span class="math inline">\(m^{k+l} = \langle m^k m^l\rangle\)</span>.</p>
@@ -290,9 +290,245 @@ Fig. 8 - The light rays of a circular mirror with an increasing number of reflec
 &amp;= \{ [ D_1f] [g_1] + \dots + [D_n f] [g_n]| [g_i] \in \boldsymbol{\mathcal{E}}\}.
 \end{align}
 \]</span></p>
-<p>This finally allows us to link the equivalence in terms of germs to the equivalence in terms of Taylor series.</p>
+<p>This finally allows us to link the equivalence in terms of germs to the equivalence in terms of the Taylor series.</p>
 <p><strong>Theorem:</strong> <em>The germ <span class="math inline">\([f]\)</span> is <span class="math inline">\(k\)</span>-determined when the ideal <span class="math inline">\(m^k\)</span> is contained in the ideal <span class="math inline">\(\langle m \boldsymbol{\mathcal{J}} \rangle\)</span>, i.e. <span class="math inline">\(m^k \subset \langle m \boldsymbol{\mathcal{J}} \rangle\)</span>.</em></p>
 <p><strong>Proof:</strong> <em>For the proof I refer to chapter four of <a href="https://www.routledge.com/Catastrophe-Theory-Second-Edition/Castrigiano-Hayes/p/book/9780813341255">Catastrophe Theory</a> by Domenico Castrigiano and Sandra Hayes.</em></p>
+<h4 id="thoms-theorem">Thom’s theorem</h4>
+<p>Thom’s classification of critical points applies to germs with are at most <span class="math inline">\(4\)</span>-codimensional. The codimension of a germ is here the number of parameters required to describe the universal unfolding of the germ. For germs with codimension higher than <span class="math inline">\(7\)</span>, the classification becomes more involved as we are required to consider families of catastrophes, known as <strong>unimodular germs</strong>. Formally,</p>
+<p><strong>Definition:</strong> <em>Let <span class="math inline">\([f]\)</span> be a germ in <span class="math inline">\(m^2\)</span>. The codimension of the germ is defined as</em></p>
+<p><span class="math display">\[\text{cod}[f] \equiv \text{dim } m / \boldsymbol{\mathcal{J}}[f].\]</span></p>
+<p>It can be shown that the notion of codimension is independent of the choice of coordinates, <em>i.e.,</em> two equivalent germs (which can be transformed into each other with a diffeomorphism germ) have the same codimension. Not surprisingly, the codimension is related to the corank of a function. When the codimension of a nondegenerate critical point is between <span class="math inline">\(1\)</span> and <span class="math inline">\(4\)</span>, the corank will be either <span class="math inline">\(1\)</span> or <span class="math inline">\(2\)</span>. Using the reduction lemma, we can thus reduce the classification to totally degenerate critical points in one and two variables.</p>
+<p>Using these tools, it can be proven that every degenerate critical point with at most codimension <span class="math inline">\(4\)</span> is equivalent to one of the <span class="math inline">\(\boldsymbol{7}\)</span> elementary catastrophes</p>
+<table style="width:100%">
+<tr>
+<th>
+Name
+</th>
+<th>
+Symbol
+</th>
+<th>
+Germ
+</th>
+<th>
+Corank
+</th>
+<th>
+Codimension
+</th>
+<th>
+Determinancy
+</th>
+</tr>
+<tr>
+<td>
+Fold
+</td>
+<td>
+<span class="math inline">\(A_2\)</span>
+</td>
+<td>
+<span class="math inline">\([x^2]\)</span>
+</td>
+<td>
+<span class="math inline">\(1\)</span>
+</td>
+<td>
+<span class="math inline">\(1\)</span>
+</td>
+<td>
+<span class="math inline">\(3\)</span>
+</td>
+</tr>
+<tr>
+<td>
+Cusp
+</td>
+<td>
+<span class="math inline">\(A_3\)</span>
+</td>
+<td>
+<span class="math inline">\([x^4]\)</span>
+</td>
+<td>
+<span class="math inline">\(1\)</span>
+</td>
+<td>
+<span class="math inline">\(2\)</span>
+</td>
+<td>
+<span class="math inline">\(3\)</span>
+</td>
+</tr>
+<tr>
+<td>
+Swallowtail
+</td>
+<td>
+<span class="math inline">\(A_4\)</span>
+</td>
+<td>
+<span class="math inline">\([x^5]\)</span>
+</td>
+<td>
+<span class="math inline">\(1\)</span>
+</td>
+<td>
+<span class="math inline">\(3\)</span>
+</td>
+<td>
+<span class="math inline">\(5\)</span>
+</td>
+</tr>
+<tr>
+<td>
+Butterfly
+</td>
+<td>
+<span class="math inline">\(A_5\)</span>
+</td>
+<td>
+<span class="math inline">\([x^6]\)</span>
+</td>
+<td>
+<span class="math inline">\(1\)</span>
+</td>
+<td>
+<span class="math inline">\(4\)</span>
+</td>
+<td>
+<span class="math inline">\(6\)</span>
+</td>
+</tr>
+<tr>
+<td>
+Elliptic umbilic
+</td>
+<td>
+<span class="math inline">\(D_{4}^-\)</span>
+</td>
+<td>
+<span class="math inline">\([x^3-xy^2]\)</span>
+</td>
+<td>
+<span class="math inline">\(2\)</span>
+</td>
+<td>
+<span class="math inline">\(3\)</span>
+</td>
+<td>
+<span class="math inline">\(3\)</span>
+</td>
+</tr>
+<tr>
+<td>
+Hyperbolic umbilic
+</td>
+<td>
+<span class="math inline">\(D_{4}^+\)</span>
+</td>
+<td>
+<span class="math inline">\([x^3+y^3]\)</span>
+</td>
+<td>
+<span class="math inline">\(2\)</span>
+</td>
+<td>
+<span class="math inline">\(3\)</span>
+</td>
+<td>
+<span class="math inline">\(3\)</span>
+</td>
+</tr>
+<tr>
+<td>
+Parabolic umbilic
+</td>
+<td>
+<span class="math inline">\(D_{5}\)</span>
+</td>
+<td>
+<span class="math inline">\([x^2 y+y^4]\)</span>
+</td>
+<td>
+<span class="math inline">\(2\)</span>
+</td>
+<td>
+<span class="math inline">\(4\)</span>
+</td>
+<td>
+<span class="math inline">\(4\)</span>
+</td>
+</tr>
+</table>
+<p>The universal unfoldings of these <span class="math inline">\(\boldsymbol{7}\)</span> elementary catastrophes are given by</p>
+<table style="width:100%">
+<tr>
+<th>
+Name
+</th>
+<th>
+Universal unfolding
+</th>
+</tr>
+<tr>
+<td>
+Fold
+</td>
+<td>
+<span class="math inline">\(x^3/3+\mu x\)</span>
+</td>
+</tr>
+<tr>
+<td>
+Cusp
+</td>
+<td>
+<span class="math inline">\(x^4/4+\mu_2 x^2/2 + \mu_1 x\)</span>
+</td>
+</tr>
+<tr>
+<td>
+Swallowtail
+</td>
+<td>
+<span class="math inline">\(x^5/5+\mu_3 x^3/3 + \mu_2 x^2 + \mu_1 x\)</span>
+</td>
+</tr>
+<tr>
+<td>
+Butterfly
+</td>
+<td>
+<span class="math inline">\(x^6/6+\mu_4 x^4/4 + \mu_3 x^3/3 + \mu_2 x^2/2 + \mu_1 x\)</span>
+</td>
+</tr>
+<tr>
+<td>
+Elliptic umbilic
+</td>
+<td>
+<span class="math inline">\(x^3 -3 x y^2 - \mu_3(x^2+y^2)-\mu_2 y - \mu_1 x\)</span>
+</td>
+</tr>
+<tr>
+<td>
+Hyperbolic umbilic
+</td>
+<td>
+<span class="math inline">\(x^3 + y^3 - \mu_3 x y - \mu_2 y - \mu_1 x\)</span>
+</td>
+</tr>
+<tr>
+<td>
+Parabolic umbilic
+</td>
+<td>
+<span class="math inline">\(x^4 + x y^2 + \mu_4 y^2 + \mu_3 x^2 + \mu_2 y + \mu_1 x\)</span>
+</td>
+</tr>
+</table>
+<p>This concludes Thom’s original formulation of catastrophe theory. It is possible to extend the classification to critical points with higher codimension using the same techniques.</p>
 <h3 id="proving-some-theorems">Proving some theorems</h3>
 <p>To complete the classification theorem but keep the flow of the reasoning, we here give some proves of some of the lemmas and theorems.</p>
 <p><strong>Morse lemma:</strong> <em>Let <span class="math inline">\(f\)</span> be a smooth function of <span class="math inline">\(n\)</span> variables with a critical point at the origin with index <span class="math inline">\(s\)</span>. The critical point is nondegenerate if and only if there exists a local diffeomorphism <span class="math inline">\(\psi\)</span> which preserves the origin <span class="math inline">\(\psi(\boldsymbol{0})=\boldsymbol{0}\)</span> for which</em></p>
@@ -313,19 +549,13 @@ f(x_1,\dots, x_n) &amp;= f(\boldsymbol{0}) + \int_0^1 \frac{\mathrm{d}f}{\mathrm
 <p><span class="math display">\[f(x_1,\dots,x_n) = f(\boldsymbol{0}) + \sum_{i,j=1}^n x_i x_j \bar{h}_{ij}(x_1,\dots,x_n),\]</span></p>
 <p><em>with the symmetrized functions <span class="math inline">\(\bar{h}_{ij} = \frac{1}{2}(h_{ij}+h_{ji}).\)</span></em></p>
 <p><em>Since the Hessian <span class="math inline">\((\bar{h}_{ij}(\boldsymbol{0})\)</span> is nonsingular. We have thus obtained a real symmetric form for <span class="math inline">\(f\)</span> which we can diagonalise in a neighbourhood of the origin using induction. For the first term, we can use the change of coordinates</em></p>
-<p><span class="math display">\[y_1 = |\bar{h}_{11}|^{1/2}\left(x_1 + \sum_{i=2}^n x_i \bar{h}_{i1}/|\bar{h}_{11}|\right)\]</span></p>
+<p><span class="math display">\[y_1 = |\bar{h}_{11}|^{1/2}\left(x_1 + \sum_{i=2}^n x_i \frac{\bar{h}_{i1}}{|\bar{h}_{11}}|\right)\]</span></p>
 <p><em>and <span class="math inline">\(y_i = x_i\)</span> for <span class="math inline">\(i=2,\dots, n\)</span>, to replace the dependence on <span class="math inline">\(x_1\)</span> by the simple quadratic form <span class="math inline">\(\pm y_1^2\)</span>. Suppose we managed to carry this forward till the <span class="math inline">\(i=m-1\)</span>-th term</em></p>
 <p><span class="math display">\[f = f(\boldsymbol{0}) \pm y_1^2 \pm \dots \pm y_{m-1}^2 + \sum_{i,j = m}^n y_i y_n H_{ij}(y_1,\dots, y_n)\]</span></p>
 <p><em>where <span class="math inline">\(H_{ij}\)</span> is a new symmetric function. Changing coordinates again to <span class="math inline">\(v_i = y_i\)</span> when <span class="math inline">\(i \neq m\)</span> and</em></p>
-<p><span class="math display">\[v_m = |H_{mm}|^{1/2}\left(y_m + \sum_{i=m+1}^n y_i H_{im}/|H_{mm}|\right),\]</span></p>
+<p><span class="math display">\[v_m = |H_{mm}|^{1/2}\left(y_m + \sum_{i=m+1}^n y_i \frac{H_{im}}{|H_{mm}}|\right),\]</span></p>
 <p><em>we obtain the expression</em></p>
 <p><span class="math display">\[f=f(\boldsymbol{0}) \pm v_1^2 \pm \dots \pm v_m^2 + \sum_{i,j=m+1}^n v_i v_j H&#39;_{ij}(v_1,\dots, v_n)\]</span></p>
 <p><em>with again a symmetric function <span class="math inline">\(H&#39;_{ij}\)</span>. Continuing this process till we have eliminated the summation symbol gives the required quadratic form after a simple reordering.</em></p>
-<p><strong>Reduction lemma:</strong> <em>Around a degenerate critical point <span class="math inline">\(\boldsymbol{0}\)</span> of a smooth function <span class="math inline">\(f\)</span> of <span class="math inline">\(n\)</span> variables with rank <span class="math inline">\(r\)</span> and index <span class="math inline">\(s\)</span>, there exists a local diffeomorphism <span class="math inline">\(\psi\)</span> preserving the origin, such that the function can be expressed as the sum</em></p>
-<p><span class="math display">\[f(\psi(\boldsymbol{x})) = f(\boldsymbol{0}) + q_{sr}(x_1,\dots, x_r) +g(x_{r+1},\dots,x_{n}),\]</span></p>
-<p><em>where <span class="math inline">\(q_{sr}\)</span> is a nondegenerate normal form in <span class="math inline">\(r\)</span> variables, vanishing at the origin, with a critical point at the origin with index <span class="math inline">\(s\)</span>, and <span class="math inline">\(g\)</span> is a smooth function of <span class="math inline">\(n-r\)</span> variables, vanishing at the origin, with a critical point at the origin that is <strong>totally degenerate</strong> (has vanishing rank). Note that using Morse lemma, we can select coordinates for which</em></p>
-<p><span class="math display">\[q_{sr}(x_1,\dots, x_r) = -x_1^2 -\dots - x_s^2 + x_{s+1}^2+\dots + x_{r}^2.\]</span></p>
-<p><em>The rank and the index completely classifies the nondegenerate part of the critical point. The function <span class="math inline">\(g\)</span> is known as the <strong>residual singularity</strong> of <span class="math inline">\(f\)</span> at <span class="math inline">\(\boldsymbol{0}\)</span>.</em></p>
-<p><strong>Proof:</strong> <em>To Do.</em></p>
 </body>
 </html>
