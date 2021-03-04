@@ -549,11 +549,11 @@ f(x_1,\dots, x_n) &amp;= f(\boldsymbol{0}) + \int_0^1 \frac{\mathrm{d}f}{\mathrm
 <p><span class="math display">\[f(x_1,\dots,x_n) = f(\boldsymbol{0}) + \sum_{i,j=1}^n x_i x_j \bar{h}_{ij}(x_1,\dots,x_n),\]</span></p>
 <p><em>with the symmetrized functions <span class="math inline">\(\bar{h}_{ij} = \frac{1}{2}(h_{ij}+h_{ji}).\)</span></em></p>
 <p><em>Since the Hessian <span class="math inline">\((\bar{h}_{ij}(\boldsymbol{0})\)</span> is nonsingular. We have thus obtained a real symmetric form for <span class="math inline">\(f\)</span> which we can diagonalise in a neighbourhood of the origin using induction. For the first term, we can use the change of coordinates</em></p>
-<p><span class="math display">\[y_1 = |\bar{h}_{11}|^{1/2}\left(x_1 + \sum_{i=2}^n x_i \frac{\bar{h}_{i1}}{|\bar{h}_{11}}|\right)\]</span></p>
+<p><span class="math display">\[y_1 = |\bar{h}_{11}|^{1/2}\left(x_1 + \sum_{i=2}^n x_i \frac{\bar{h}_{i1}}{|\bar{h}_{11}|}\right)\]</span></p>
 <p><em>and <span class="math inline">\(y_i = x_i\)</span> for <span class="math inline">\(i=2,\dots, n\)</span>, to replace the dependence on <span class="math inline">\(x_1\)</span> by the simple quadratic form <span class="math inline">\(\pm y_1^2\)</span>. Suppose we managed to carry this forward till the <span class="math inline">\(i=m-1\)</span>-th term</em></p>
 <p><span class="math display">\[f = f(\boldsymbol{0}) \pm y_1^2 \pm \dots \pm y_{m-1}^2 + \sum_{i,j = m}^n y_i y_n H_{ij}(y_1,\dots, y_n)\]</span></p>
 <p><em>where <span class="math inline">\(H_{ij}\)</span> is a new symmetric function. Changing coordinates again to <span class="math inline">\(v_i = y_i\)</span> when <span class="math inline">\(i \neq m\)</span> and</em></p>
-<p><span class="math display">\[v_m = |H_{mm}|^{1/2}\left(y_m + \sum_{i=m+1}^n y_i \frac{H_{im}}{|H_{mm}}|\right),\]</span></p>
+<p><span class="math display">\[v_m = |H_{mm}|^{1/2}\left(y_m + \sum_{i=m+1}^n y_i \frac{H_{im}}{|H_{mm}|}\right),\]</span></p>
 <p><em>we obtain the expression</em></p>
 <p><span class="math display">\[f=f(\boldsymbol{0}) \pm v_1^2 \pm \dots \pm v_m^2 + \sum_{i,j=m+1}^n v_i v_j H&#39;_{ij}(v_1,\dots, v_n)\]</span></p>
 <p><em>with again a symmetric function <span class="math inline">\(H&#39;_{ij}\)</span>. Continuing this process till we have eliminated the summation symbol gives the required quadratic form after a simple reordering.</em></p>
